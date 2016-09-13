@@ -1,0 +1,22 @@
+{
+  "name": "ix-landing",
+  "version": "1.0.0",
+  "description": "http://rsamokhin.github.io.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSamokhin/ibm-ixlanding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RSamokhin/ibm-ixlanding/issues"
+  },
+  "homepage": "https://github.com/RSamokhin/ibm-ixlanding#readme",
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}
