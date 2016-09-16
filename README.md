@@ -1,1 +1,1 @@
-http://rsamokhin.github.io/ix-landing/index.html
+https://rsamokhin.github.io/ibm-ixlanding/
