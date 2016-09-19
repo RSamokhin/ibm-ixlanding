@@ -49,68 +49,9 @@
 <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="88530" data-tilda-page-id="307226"  >
 	<!-- SRG -->
 	<style>
-		#photos {
-			oferflow:hidden;
-			box-sizing: border-box;
-			background-color: #000;
-			/* Prevent vertical gaps */
-			line-height: 0;
-			-webkit-column-count: 10;
-			-webkit-column-gap:   0px;
-			-moz-column-count:    10;
-			-moz-column-gap:      0px;
-			column-count:         10;
-			column-gap:           0px;
-			position:relative;
-		}
-		#photos img {
-			/* Just in case there are inline attributes */
-			width: 100% !important;
-			height: auto !important;
-			background-color: #000;
-		}
-		@media (max-width: 1200px) {
-			#photos {
-				-moz-column-count:    10;
-				-webkit-column-count: 10;
-				column-count:         10;
-			}
-		}
-		@media (max-width: 1000px) {
-			#photos {
-				-moz-column-count:    8;
-				-webkit-column-count: 8;
-				column-count:         8;
-			}
-		}
-		@media (max-width: 800px) {
-			#photos {
-				-moz-column-count:    4;
-				-webkit-column-count: 4;
-				column-count:         4;
-			}
-		}
-		@media (max-width: 400px) {
-			#photos {
-				-moz-column-count:    2;
-				-webkit-column-count: 2;
-				column-count:         2;
-			}
-		}
-		#collage {
-			margin: 0;
-			padding: 0;
-			width:100%;
-			height: 100%;
-			max-height: 800px;
-			position: absolute;
-			overflow: hidden;
-		}
-		#photos.m-hidden {
-			visibility: hidden;
-		}
+
 		.collage-mask {
-			background-color: rgba(28, 28, 28, 0.7) !important;
+			background-color: rgba(28, 28, 28, 0.5) !important;
 		}
 		.collage-mask-bg {
 			/*background-image: none !important;*/
@@ -123,205 +64,68 @@
 		.no-bg {
 			background-image: none !important;
 		}
-		/*
-                #photos > .mask {
-                    content:'';
-                    width: 100%;
-                    height: 100000%;
-                    background-color: #000;
-                    position:absolute;
-                    top:0;
-                    left:0;
-                    opacity: 0.6;
-                }
-        */
 
+		#collage {
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			margin: 0;
+			position: absolute;
+			padding: 0;
+		}
+		#collage.m-hidden {
+			visibility: hidden;
+		}
+		.content {
+			position: relative;
+			width: 100%;
+			background: #eee;
+			padding: 0px;
+			background-image: url(./tiles/bg.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.content:after {
+			content: '';
+			display: table;
+			float: none;
+			clear: both;
+		}
+		.rect {
+			width: 10%;
+			float: left;
+			position: relative;
+			background-size: cover;
+			background-repeat: no-repeat;
+			box-sizing: border-box;
+		}
+		.rect:after {
+			content: '';
+			display: table;
+			float: none;
+			clear: both;
+		}
+		.rect-inner {
+			content: '';
+			position: relative;
+			overflow: hidden;
+			width: 0;
+			height: 0;
+			top: 0;
+			left: 0;
+			padding: 33% 50%;
+			background: dodgerblue;
+			/*border: 1px dashed #f00;*/
+			box-sizing: border-box;
+			opacity: .3;
+		}
+		.hidden-overflow {
+			overflow:hidden;
+			position: relative;
+		}
 	</style>
 
-	<div id="collage">
-		<section id="photos" class="m-hidden">
-			<img src="./tiles/38.jpg"/>
-			<img src="./tiles/64.jpg"/>
-			<img src="./tiles/150.jpg"/>
-			<img src="./tiles/126.jpg"/>
-			<img src="./tiles/4.jpg"/>
-			<img src="./tiles/110.jpg"/>
-			<img src="./tiles/112.jpg"/>
-			<img src="./tiles/21.jpg"/>
-			<img src="./tiles/111.jpg"/>
-			<img src="./tiles/63.jpg"/>
-			<img src="./tiles/62.jpg"/>
-			<img src="./tiles/77.jpg"/>
-			<img src="./tiles/26.jpg"/>
-			<img src="./tiles/55.jpg"/>
-			<img src="./tiles/143.jpg"/>
-			<img src="./tiles/69.jpg"/>
-			<img src="./tiles/135.jpg"/>
-			<img src="./tiles/94.jpg"/>
-			<img src="./tiles/87.jpg"/>
-			<img src="./tiles/114.jpg"/>
-			<img src="./tiles/7.jpg"/>
-			<img src="./tiles/24.jpg"/>
-			<img src="./tiles/19.jpg"/>
-			<img src="./tiles/3.jpg"/>
-			<img src="./tiles/155.jpg"/>
-			<img src="./tiles/79.jpg"/>
-			<img src="./tiles/42.jpg"/>
-			<img src="./tiles/44.jpg"/>
-			<img src="./tiles/51.jpg"/>
-			<img src="./tiles/117.jpg"/>
-			<img src="./tiles/141.jpg"/>
-			<img src="./tiles/167.jpg"/>
-			<img src="./tiles/160.jpg"/>
-			<img src="./tiles/23.jpg"/>
-			<img src="./tiles/121.jpg"/>
-			<img src="./tiles/60.jpg"/>
-			<img src="./tiles/75.jpg"/>
-			<img src="./tiles/106.jpg"/>
-			<img src="./tiles/80.jpg"/>
-			<img src="./tiles/78.jpg"/>
-			<img src="./tiles/159.jpg"/>
-			<img src="./tiles/145.jpg"/>
-			<img src="./tiles/73.jpg"/>
-			<img src="./tiles/27.jpg"/>
-			<img src="./tiles/168.jpg"/>
-			<img src="./tiles/46.jpg"/>
-			<img src="./tiles/149.jpg"/>
-			<img src="./tiles/17.jpg"/>
-			<img src="./tiles/45.jpg"/>
-			<img src="./tiles/171.jpg"/>
-			<img src="./tiles/113.jpg"/>
-			<img src="./tiles/85.jpg"/>
-			<img src="./tiles/176.jpg"/>
-			<img src="./tiles/100.jpg"/>
-			<img src="./tiles/90.jpg"/>
-			<img src="./tiles/132.jpg"/>
-			<img src="./tiles/118.jpg"/>
-			<img src="./tiles/144.jpg"/>
-			<img src="./tiles/163.jpg"/>
-			<img src="./tiles/102.jpg"/>
-			<img src="./tiles/125.jpg"/>
-			<img src="./tiles/109.jpg"/>
-			<img src="./tiles/1.jpg"/>
-			<img src="./tiles/153.jpg"/>
-			<img src="./tiles/59.jpg"/>
-			<img src="./tiles/103.jpg"/>
-			<img src="./tiles/6.jpg"/>
-			<img src="./tiles/140.jpg"/>
-			<img src="./tiles/18.jpg"/>
-			<img src="./tiles/25.jpg"/>
-			<img src="./tiles/83.jpg"/>
-			<img src="./tiles/72.jpg"/>
-			<img src="./tiles/49.jpg"/>
-			<img src="./tiles/58.jpg"/>
-			<img src="./tiles/66.jpg"/>
-			<img src="./tiles/74.jpg"/>
-			<img src="./tiles/12.jpg"/>
-			<img src="./tiles/177.jpg"/>
-			<img src="./tiles/68.jpg"/>
-			<img src="./tiles/129.jpg"/>
-			<img src="./tiles/128.jpg"/>
-			<img src="./tiles/115.jpg"/>
-			<img src="./tiles/22.jpg"/>
-			<img src="./tiles/172.jpg"/>
-			<img src="./tiles/32.jpg"/>
-			<img src="./tiles/52.jpg"/>
-			<img src="./tiles/137.jpg"/>
-			<img src="./tiles/31.jpg"/>
-			<img src="./tiles/86.jpg"/>
-			<img src="./tiles/2.jpg"/>
-			<img src="./tiles/57.jpg"/>
-			<img src="./tiles/8.jpg"/>
-			<img src="./tiles/48.jpg"/>
-			<img src="./tiles/76.jpg"/>
-			<img src="./tiles/178.jpg"/>
-			<img src="./tiles/34.jpg"/>
-			<img src="./tiles/47.jpg"/>
-			<img src="./tiles/158.jpg"/>
-			<img src="./tiles/123.jpg"/>
-			<img src="./tiles/30.jpg"/>
-			<img src="./tiles/70.jpg"/>
-			<img src="./tiles/36.jpg"/>
-			<img src="./tiles/166.jpg"/>
-			<img src="./tiles/81.jpg"/>
-			<img src="./tiles/54.jpg"/>
-			<img src="./tiles/151.jpg"/>
-			<img src="./tiles/169.jpg"/>
-			<img src="./tiles/105.jpg"/>
-			<img src="./tiles/130.jpg"/>
-			<img src="./tiles/138.jpg"/>
-			<img src="./tiles/43.jpg"/>
-			<img src="./tiles/56.jpg"/>
-			<img src="./tiles/134.jpg"/>
-			<img src="./tiles/122.jpg"/>
-			<img src="./tiles/146.jpg"/>
-			<img src="./tiles/97.jpg"/>
-			<img src="./tiles/156.jpg"/>
-			<img src="./tiles/127.jpg"/>
-			<img src="./tiles/95.jpg"/>
-			<img src="./tiles/39.jpg"/>
-			<img src="./tiles/136.jpg"/>
-			<img src="./tiles/53.jpg"/>
-			<img src="./tiles/11.jpg"/>
-			<img src="./tiles/40.jpg"/>
-			<img src="./tiles/104.jpg"/>
-			<img src="./tiles/65.jpg"/>
-			<img src="./tiles/41.jpg"/>
-			<img src="./tiles/89.jpg"/>
-			<img src="./tiles/20.jpg"/>
-			<img src="./tiles/10.jpg"/>
-			<img src="./tiles/139.jpg"/>
-			<img src="./tiles/152.jpg"/>
-			<img src="./tiles/14.jpg"/>
-			<img src="./tiles/9.jpg"/>
-			<img src="./tiles/91.jpg"/>
-			<img src="./tiles/29.jpg"/>
-			<img src="./tiles/162.jpg"/>
-			<img src="./tiles/131.jpg"/>
-			<img src="./tiles/98.jpg"/>
-			<img src="./tiles/101.jpg"/>
-			<img src="./tiles/71.jpg"/>
-			<img src="./tiles/61.jpg"/>
-			<img src="./tiles/92.jpg"/>
-			<img src="./tiles/35.jpg"/>
-			<img src="./tiles/120.jpg"/>
-			<img src="./tiles/116.jpg"/>
-			<img src="./tiles/174.jpg"/>
-			<img src="./tiles/173.jpg"/>
-			<img src="./tiles/142.jpg"/>
-			<img src="./tiles/13.jpg"/>
-			<img src="./tiles/5.jpg"/>
-			<img src="./tiles/148.jpg"/>
-			<img src="./tiles/15.jpg"/>
-			<img src="./tiles/96.jpg"/>
-			<img src="./tiles/50.jpg"/>
-			<img src="./tiles/93.jpg"/>
-			<img src="./tiles/124.jpg"/>
-			<img src="./tiles/82.jpg"/>
-			<img src="./tiles/147.jpg"/>
-			<img src="./tiles/28.jpg"/>
-			<img src="./tiles/165.jpg"/>
-			<img src="./tiles/84.jpg"/>
-			<img src="./tiles/88.jpg"/>
-			<img src="./tiles/37.jpg"/>
-			<img src="./tiles/133.jpg"/>
-			<img src="./tiles/108.jpg"/>
-			<img src="./tiles/154.jpg"/>
-			<img src="./tiles/67.jpg"/>
-			<img src="./tiles/33.jpg"/>
-			<img src="./tiles/170.jpg"/>
-			<img src="./tiles/157.jpg"/>
-			<img src="./tiles/119.jpg"/>
-			<img src="./tiles/164.jpg"/>
-			<img src="./tiles/161.jpg"/>
-			<img src="./tiles/107.jpg"/>
-			<img src="./tiles/175.jpg"/>
-			<img src="./tiles/99.jpg"/>
-			<img src="./tiles/16.jpg"/>
 
-
-		</section>
-	</div>
 
 	<script>
 
@@ -343,7 +147,7 @@
 		}
 
 		for (var i = 0; i < a.length; i++) {
-			r+='\n<img src="./tiles/'+a[i]+'.jpg"/>'
+			r+='\n<div class="rect" style="background-image:url(./tiles/'+a[i]+'.jpg)"><div class="rect-inner"></div></div>';
 		}
 
 		fs.writeFileSync('.r.html', r, 'utf-8')*/
@@ -351,18 +155,18 @@
 		setInterval(function () {
 			for (var i = 0 ; i < 2; i ++) {
 				var n = (Math.floor(178 * Math.random()));
-				var image =  $('#photos').children().eq(n);
+				var image =  $('#collage > .content').children().eq(n);
 				image.fadeOut(0, function () {
-					image.attr('src', './tiles/' + Math.ceil(Math.random() * 178) + '.jpg');
+					image.attr('background-image', 'url(./tiles/' + Math.ceil(Math.random() * 178) + '.jpg)');
 					image.fadeIn(2000);
 				});
 			}
 
 		}, 500)
 		setTimeout(function () {
-			$('#photos').removeClass('m-hidden')
+			$('#collage').removeClass('m-hidden')
 			$('.collage-mask-bg').fadeOut('3000');
-		}, 2000)
+		}, 3000)
 	</script>
 
 	<!-- SRG -->
@@ -429,8 +233,196 @@ $( document ).ready(function() {
 
 
 <div id="rec8582169" class="r" style="padding-bottom:30px; " data-animationappear="off" data-record-type="396"   >
-<div class='t396'>
-  
+<div class='t396 hidden-overflow'>
+	<!-- SRG -->
+
+	<div id="collage" class="m-hidden">
+		<div class="content">
+
+			<div class="rect" style="background-image:url(./tiles/55.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/94.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/112.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/72.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/60.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/141.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/178.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/69.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/3.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/101.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/14.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/47.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/54.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/37.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/8.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/19.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/99.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/126.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/157.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/86.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/113.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/170.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/152.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/139.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/17.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/59.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/153.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/5.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/131.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/109.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/143.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/107.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/79.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/13.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/23.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/148.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/78.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/65.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/75.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/117.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/85.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/144.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/159.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/29.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/82.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/160.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/123.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/130.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/50.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/63.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/43.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/25.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/7.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/135.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/108.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/33.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/15.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/88.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/122.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/21.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/22.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/98.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/81.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/165.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/95.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/134.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/10.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/176.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/38.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/175.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/28.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/71.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/119.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/40.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/34.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/97.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/11.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/167.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/30.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/158.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/106.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/96.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/73.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/58.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/140.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/24.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/110.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/57.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/142.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/169.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/171.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/154.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/87.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/27.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/155.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/111.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/114.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/2.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/39.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/53.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/66.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/173.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/104.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/12.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/32.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/20.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/162.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/67.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/164.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/147.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/51.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/133.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/102.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/76.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/129.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/125.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/1.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/149.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/118.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/62.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/91.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/132.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/121.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/127.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/116.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/120.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/89.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/31.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/124.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/64.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/138.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/156.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/83.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/151.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/145.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/46.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/45.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/163.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/90.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/68.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/74.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/115.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/100.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/16.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/161.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/177.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/128.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/18.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/174.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/137.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/70.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/49.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/103.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/9.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/26.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/56.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/150.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/146.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/80.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/48.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/168.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/42.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/105.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/77.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/41.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/172.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/92.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/61.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/6.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/44.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/4.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/93.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/136.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/84.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/166.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/52.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/35.jpg)"><div class="rect-inner"></div></div>
+			<div class="rect" style="background-image:url(./tiles/36.jpg)"><div class="rect-inner"></div></div>
+
+		</div>
+	</div>
+
+	<!-- SRG -->
+
 	<div class="t396__artboard collage-mask" data-artboard-recid="8582169">
 		<div class="collage-mask-bg"></div>
       <div class="t396__carrier  no-bg" data-artboard-recid="8582169"></div>
