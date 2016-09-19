@@ -99,6 +99,24 @@
 			background-repeat: no-repeat;
 			box-sizing: border-box;
 		}
+
+		@media (max-width: 1200px) {
+			.rect {
+				width: 20%;
+			}
+		}
+		@media (max-width: 800px) {
+			.rect {
+				width: 25%;
+			}
+		}
+		@media (max-width: 400px) {
+			.rect {
+				width: 50%;
+			}
+		}
+
+
 		.rect:after {
 			content: '';
 			display: table;
@@ -165,7 +183,7 @@
 		}, 500)
 		setTimeout(function () {
 			$('#collage').removeClass('m-hidden')
-			$('.collage-mask-bg').fadeOut('3000');
+			$('.collage-mask-bg').fadeOut(3000);
 		}, 3000)
 	</script>
 
