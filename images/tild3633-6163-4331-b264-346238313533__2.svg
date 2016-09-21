@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 42</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group-42" sketch:type="MSLayerGroup">
+            <rect id="Rectangle-695-Copy" opacity="0" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="50" height="50"></rect>
+            <g id="Group" fill="#000000" sketch:type="MSShapeGroup">
+                <path d="M25,0 C11.215,0 0,11.215 0,25 C0,38.785 11.215,50 25,50 C38.785,50 50,38.785 50,25 C50,11.215 38.785,0 25,0 L25,0 Z M25,48 C12.318,48 2,37.683 2,25 C2,12.318 12.318,2 25,2 C37.683,2 48,12.318 48,25 C48,37.683 37.683,48 25,48 L25,48 Z" id="Shape"></path>
+                <path d="M35.799,12.829 L21.657,21.314 C21.516,21.398 21.399,21.516 21.314,21.657 L12.829,35.799 C12.593,36.193 12.655,36.696 12.979,37.021 C13.172,37.214 13.428,37.314 13.687,37.314 C13.863,37.314 14.041,37.267 14.201,37.171 L28.343,28.686 C28.484,28.602 28.602,28.484 28.686,28.343 L37.171,14.201 C37.407,13.807 37.345,13.304 37.021,12.979 C36.695,12.654 36.191,12.594 35.799,12.829 L35.799,12.829 Z M27.1,27.1 L16.602,33.399 L22.9,22.9 L33.398,16.602 L27.1,27.1 L27.1,27.1 Z" id="Shape"></path>
+                <path d="M25,12 C25.552,12 26,11.552 26,11 L26,9 C26,8.448 25.552,8 25,8 C24.448,8 24,8.448 24,9 L24,11 C24,11.552 24.448,12 25,12 L25,12 Z" id="Shape"></path>
+                <path d="M41,24 L39,24 C38.447,24 38,24.448 38,25 C38,25.552 38.447,26 39,26 L41,26 C41.553,26 42,25.552 42,25 C42,24.448 41.553,24 41,24 L41,24 Z" id="Shape"></path>
+                <path d="M25,38 C24.448,38 24,38.447 24,39 L24,41 C24,41.553 24.448,42 25,42 C25.552,42 26,41.553 26,41 L26,39 C26,38.447 25.552,38 25,38 L25,38 Z" id="Shape"></path>
+                <path d="M11,24 L9,24 C8.448,24 8,24.448 8,25 C8,25.552 8.448,26 9,26 L11,26 C11.552,26 12,25.552 12,25 C12,24.448 11.552,24 11,24 L11,24 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -3,3 +3,8 @@ ErrorDocument 404 /404.html
 
 DirectoryIndex page307226.html
 
+RewriteEngine On
+
+RewriteRule ^v2html$ page315601.html [NC]
+RewriteRule ^v2html/$ page315601.html [NC]
+
