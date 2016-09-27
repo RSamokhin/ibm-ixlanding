@@ -849,7 +849,8 @@
   text-align: right;
 }
 .t-margin_auto {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .t-valign_middle {
   vertical-align: middle;
@@ -859,6 +860,10 @@
 }
 .t-valign_bottom {
   vertical-align: bottom;
+}
+.t-margin_left_auto {
+  margin-right: 0;
+  margin-left: auto;
 }
 .yashare-style .b-share-btn__facebook,
 .yashare-style .b-share-btn__twitter,
